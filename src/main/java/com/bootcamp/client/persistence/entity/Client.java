@@ -1,11 +1,9 @@
 package com.bootcamp.client.persistence.entity;
 
-import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection="Client")
+@Document(collection="client")
 public class Client {
-    @Id
     private String idClient;
     private String typeClient;
     private String legalRepresentative;
