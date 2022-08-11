@@ -1,13 +1,26 @@
 package com.bootcamp.client.persistence.entity;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection="client")
 public class Client {
+
+    @Id
+    private String id;
     private String idClient;
     private String typeClient;
     private String legalRepresentative;
     private String[] Products;
+
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
 
     public Client() {
     }
