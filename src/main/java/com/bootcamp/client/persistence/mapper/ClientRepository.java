@@ -21,8 +21,8 @@ public class ClientRepository {
        return dao.insert(client);
 
     }
-    public Flux<Client> getById(String id){
-        return dao.findAll().filter(request -> request.getIdClient().equals(id));
+    public Mono<Client> getById(String id){
+        return dao.findById(id);
     }
 
     public Mono<Client> update(Client cliente){
